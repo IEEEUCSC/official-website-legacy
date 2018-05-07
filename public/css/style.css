@@ -63,8 +63,9 @@ a {
   text-align: justify;
 
 }
-body{
-    background: rgba(105, 106, 113, 0.13);
+
+body, html {
+  height: 100%;
 }
 
 #welcome-message{
@@ -83,6 +84,16 @@ body{
 background-color: #fafafa;
 }
 
-p{
 
+.bg {
+  /* The image used */
+  background-image: url("../../images/backgroundn.jpg");
+
+  /* Half height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
