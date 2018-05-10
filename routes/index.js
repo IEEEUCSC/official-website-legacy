@@ -24,7 +24,7 @@ router.get('/wie',function (req, res,next) {
 
 //get cs_chapter page
 router.get('/cs_chapter',function (req, res,next) {
-    res.render('cs_chapter',{title:'cs_chapter Details'});
+    res.render('cs_chapter',{title:'cs_chaptern Details'});
 });
 
 module.exports = router;
