@@ -22,4 +22,9 @@ router.get('/wie',function (req, res,next) {
     res.render('wie',{title:'WIE Details'});
 });
 
+//get cs_chapter page
+router.get('/cs_chapter',function (req, res,next) {
+    res.render('cs_chapter',{title:'cs_chapter Details'});
+});
+
 module.exports = router;

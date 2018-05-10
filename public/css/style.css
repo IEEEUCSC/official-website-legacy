@@ -98,3 +98,13 @@ background-color: #fafafa;
   background-repeat: repeat;
   background-size: cover;
 }
+
+@media (min-width: 768px) {
+  .carousel-multi-item-2 .col-md-4 {
+    float: left;
+    width: 33%;
+    max-width: 100%; } }
+
+.carousel-multi-item-2 .card img {
+  border-radius: 2px; }
+
