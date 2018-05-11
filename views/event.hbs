@@ -1,0 +1,78 @@
+<main >
+
+    <!--Main container-->
+    <div class="container" id  >
+
+        <br><br><br><br><br><br>
+
+        <br>
+
+
+        <div class="row">
+
+            <!--main content-->
+            <div class="col-lg-8 col-md-12 mb-8">
+
+
+                {{#each events}}
+
+
+                    <div class="card-body">
+
+                        <h4>{{this.title}} </h4><br><br>
+
+
+                        <div class="view overlay">
+                            <img src="../images/{{this.image1}}" class="img-fluid" alt="zoom" height="260" width="90%">
+
+                        </div><br>
+                        <small>{{this.published_date}}</small><br>
+
+                       <p> {{this.para1}}</p>
+
+                        <p> {{this.para2}}</p>
+
+                    </div>
+
+                {{/each}}
+
+                </div>
+                <!--main content-->
+
+            <!--recent posts-->
+            <div class="col-lg-4 col-md-12 mb-4">
+
+                <br>Latest Posts<hr>
+
+                <div class="list-group">
+
+                    {{#each events}}
+
+                        <a href="" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">{{this.title}}</h5>
+
+                            </div>
+
+                            <p class="mb-1"><img src="../images/{{this.image1}}" class="img-fluid" alt="zoom" height="50%" width="60%">
+                                <small class="text-muted">{{this.published_date}}</small></p>
+
+                        </a>
+
+                    {{/each}}
+
+                </div>
+
+
+            </div>
+            <!--recent posts-->
+
+
+        </div>
+
+    </div>
+    <!--Main container-->
+
+</main>
+<!--Main layout-->
+
