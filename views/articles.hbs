@@ -1,0 +1,77 @@
+<main >
+
+    <!--Main container-->
+    <div class="container" id  >
+
+        <br><br><br><br><br><br>
+
+        <br>
+
+
+        <div class="row">
+
+            <!--main content-->
+            <div class="col-lg-8 col-md-12 mb-8">
+
+
+                <br><br>
+                <div class="list-group">
+                    {{#each events}}
+                        <div id="event">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h4 class="mb-1">{{this.title}}</h4><br>
+
+                                </div>
+
+                                <p><img src="../images/{{this.image1}}" class="img-fluid" alt="zoom" height="350" width="500" ></p>
+                            <small>{{this.published_date}}</small>
+                            <p class="mb-1"> {{this.conclustion}}</p>
+
+                                <a href="/event/{{this.id}}" class=""><small>Read more....</small></a>
+                                <hr>
+                        </div>
+                    {{/each}}
+                </div>
+
+
+
+            </div>
+            <!--main content-->
+
+            <!--recent posts-->
+            <div class="col-lg-4 col-md-12 mb-4">
+
+                <br>Latest Posts<hr>
+
+                <div class="list-group">
+
+                    {{#each events}}
+
+                    <a href="/event/{{this.id}}" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">{{this.title}}</h5>
+
+                        </div>
+
+                        <p class="mb-1"><img src="../images/{{this.image1}}" class="img-fluid" alt="zoom" height="100px" width="250px"><br>
+                            <small class="text-muted">{{this.published_date}}</small></p>
+
+                    </a>
+
+                    {{/each}}
+
+                </div>
+
+
+            </div>
+            <!--recent posts-->
+
+
+        </div>
+
+    </div>
+    <!--Main container-->
+
+</main>
+<!--Main layout-->
+
