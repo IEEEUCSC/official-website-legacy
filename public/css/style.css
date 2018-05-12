@@ -96,7 +96,7 @@ background-color: #fafafa;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: repeat;
-  background-size: cover;
+  
 }
 
 @media (min-width: 768px) {
