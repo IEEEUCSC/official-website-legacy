@@ -43,15 +43,15 @@ router.get('/cs_chapter',function (req, res,next) {
     res.render('cs_chapter',{title:'cs_chaptern Details'});
 });
 
-/* GET event page. */
+/* GET article page. */
 router.get('/events', function(req, res, next) {
     // console.log("here in events");
-    connection.query('SELECT * FROM article', function (err, rows) {
+    connection.query('SELECT * FROM article ORDER BY id DESC ; SELECT * FROM article ORDER BY id DESC LIMIT 5',[1, 2], function (err, rows) {
         if (err){
             throw err;
         }else {
             // console.log(rows);
-            res.render('articles', {events:rows});
+            res.render('articles', {events:rows[0],latest:rows[1]});
         }
     });
 
