@@ -1,64 +1,55 @@
 <!--Carousel Wrapper-->
 <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
 
-    <!--Controls-->
-    <div class="controls-top">
-        <a class="black-text" href="#multi-item-example" data-slide="prev"><i class="fa fa-angle-left fa-3x pr-3"></i></a>
-        <a class="black-text" href="#multi-item-example" data-slide="next"><i class="fa fa-angle-right fa-3x pl-3"></i></a>
-    </div>
-    <!--/.Controls-->
-
     <!--Slides-->
-    <div class="carousel-inner" role="listbox">
+    <div class="container carousel-inner" role="listbox" style="margin: 75px auto 20px auto;">
 
               {{#each latest3}}
                 <div class="carousel-item active">
-
                     <div class="col-md-4 mb-4">
-                        <div >
-                            <img class="img-fluid" src="../images/{{this.image1}}" alt="Card image cap">
-                            <div class="container"  >
-                                <h7><b>{{this.title}}</b></h7>
-                                <br>
-                                <div>
-                                    <p >{{this.conclusion}}</p>
+                        <div>
+                            <div class="event-image">
+                                <img class="img-fluid" src="../images/{{this.image1}}" alt="Card image cap">
+                                <div class="event-image-overlay">
+                                    <div class="text">
+                                        <a class="btn btn-elegant active" href="" target="_blank" role="button">
+                                            {{this.title}}
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <a class="btn btn-outline-black btn-sm" href="/event/{{this.id}}" target="_blank" role="button">Read More
-                                    <span class="glyphicon glyphicon-link"></span>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-              {{/each}}
+                {{/each}}
 
                 {{#each early3}}
-              <div class="carousel-item ">
+                <div class="carousel-item ">
 
-                  <div class="col-md-4 mb-4">
-                      <div >
-                          <img class="img-fluid" src="../images/{{this.image1}}" alt="Card image cap">
-
-
-                          <div class="container">
-                              <h7><b>{{this.title}}</b></h7>
-                              <br>
-                              <p >{{this.conclusion}}</p>
-                          </div>
-                          <div>
-                              <a class="btn btn-outline-black btn-sm" href="/event/{{this.id}}" target="_blank" role="button">Read More
-                                  <span class="glyphicon glyphicon-link"></span>
-                              </a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            {{/each}}
+                     <div class="col-md-4 mb-4">
+                        <div >
+                            <img class="img-fluid" src="../images/{{this.image1}}" alt="Card image cap">
+                            <div class="container">
+                                <h7><b>{{this.title}}</b></h7>
+                                <p>{{this.conclusion}}</p>
+                            </div>
+                        <div>
+                        <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">
+                            Read More<span class="glyphicon glyphicon-link"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
     </div>
     <!--/.Slides-->
-
+        <!--Controls-->
+    <div class="controls-top control-center mb-5">
+        <a class="black-text" href="#multi-item-example" data-slide="prev"><i class="fa fa-angle-left fa-2x pr-3"></i></a>
+        <a class="black-text" href="#multi-item-example" data-slide="next"><i class="fa fa-angle-right fa-2x pl-3"></i></a>
+    </div>
+    <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
