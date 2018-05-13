@@ -88,15 +88,16 @@ background-color: #fafafa;
 
 .bg {
   /* The image used */
-  background-image: url("../../images/backgroundn.jpg");
+  background-image: url("../../images/circles-light.png");
+
 
   /* Half height */
   height: 100%;
 
   /* Center and scale the image nicely */
-  background-position: center;
+  /*background-position: center;*/
   background-repeat: repeat;
-  
+  /*background-size: cover;*/
 }
 
 @media (min-width: 768px) {
