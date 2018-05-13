@@ -1,4 +1,4 @@
-<main >
+<main>
 
     <!--Main container-->
     <div class="container" id  >
@@ -14,27 +14,27 @@
             <div class="col-lg-8 col-md-12 mb-8">
 
 
-                {{#each events}}
+
 
 
                     <div class="card-body">
 
-                        <h4>{{this.title}} </h4><br><br>
+                        <h4>{{events.title}} </h4><br><br>
 
 
                         <div class="view overlay">
-                            <img src="../images/{{this.image1}}" class="img-fluid" alt="zoom" height="260" width="90%">
+                            <img src="../images/{{events.image1}}" class="img-fluid" alt="zoom" height="260" width="90%">
 
                         </div><br>
-                        <small>{{this.published_date}}</small><br>
+                        <small>{{events.published_date}}</small><br>
 
-                       <p> {{this.para1}}</p>
+                       <p> {{events.para1}}</p>
 
-                        <p> {{this.para2}}</p>
+                        <p> {{events.para2}}</p>
 
                     </div>
 
-                {{/each}}
+
 
                 </div>
                 <!--main content-->
@@ -46,9 +46,9 @@
 
                 <div class="list-group">
 
-                    {{#each events}}
+                    {{#each latest}}
 
-                        <a href="" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <a href="/event/{{this.id}}" class="list-group-item list-group-item-action flex-column align-items-start">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">{{this.title}}</h5>
 
@@ -75,4 +75,5 @@
 
 </main>
 <!--Main layout-->
+
 
