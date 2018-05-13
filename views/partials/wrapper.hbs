@@ -11,200 +11,52 @@
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
 
-        <!--First slide-->
-        <div class="carousel-item active">
+              {{#each latest3}}
+                <div class="carousel-item active">
 
-            <!--<div class="col-md-4 mb-4">-->
-                <!--<p></p>-->
-            <!--</div>-->
-
-            <div class="col-md-4 mb-4">
-                <div >
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg" alt="Card image cap">
-
-
-                    <div class="container"  >
-                        <h3 >1st</h3>
-                        <div>
-                            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus? Accusantium, aut beatae commodi dolore dolores esse fugit id </p>
+                    <div class="col-md-4 mb-4">
+                        <div >
+                            <img class="img-fluid" src="../images/{{this.image1}}" alt="Card image cap">
+                            <div class="container"  >
+                                <h7><b>{{this.title}}</b></h7>
+                                <br>
+                                <div>
+                                    <p >{{this.conclustion}}</p>
+                                </div>
+                            </div>
+                            <div>
+                                <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">Read More
+                                    <span class="glyphicon glyphicon-link"></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">Read More
-                            <span class="glyphicon glyphicon-link"></span>
-                        </a>
-                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div >
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg" alt="Card image cap">
+
+              {{/each}}
+
+                {{#each early3}}
+              <div class="carousel-item ">
+
+                  <div class="col-md-4 mb-4">
+                      <div >
+                          <img class="img-fluid" src="../images/{{this.image1}}" alt="Card image cap">
 
 
-                    <div class="container" style="background:transparent;">
-                        <h3 >1st 2</h3>
-                        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus? Accusantium, aut beatae commodi dolore dolores esse fugit id </p>
-                    </div>
-                    <div>
-                        <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">Read More
-                            <span class="glyphicon glyphicon-link"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div >
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg" alt="Card image cap">
-
-
-                    <div class="container" style="background:transparent;">
-                        <h3 >1st 3</h3>
-                        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus? Accusantium, aut beatae commodi dolore dolores esse fugit id </p>
-                    </div>
-                    <div>
-                        <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">Read More
-                            <span class="glyphicon glyphicon-link"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/.First slide-->
-
-        <!--Second slide-->
-        <div class="carousel-item">
-
-            <div class="col-md-4 mb-4">
-                <div >
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg" alt="Card image cap">
-
-
-                    <div class="container">
-                        <h3 >2nd 1st</h3>
-                        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus? Accusantium, aut beatae commodi dolore dolores esse fugit id </p>
-                    </div>
-                    <div>
-                        <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">Read More
-                            <span class="glyphicon glyphicon-link"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div >
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg" alt="Card image cap">
-
-
-                    <div class="container">
-                        <h3 >2nd 2nd</h3>
-                        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus? Accusantium, aut beatae commodi dolore dolores esse fugit id </p>
-                    </div>
-                    <div>
-                        <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">Read More
-                            <span class="glyphicon glyphicon-link"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div >
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg" alt="Card image cap">
-
-
-                    <div class="container">
-                        <h3 >2nd 3rd</h3>
-                        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus? Accusantium, aut beatae commodi dolore dolores esse fugit id </p>
-                    </div>
-                    <div>
-                        <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">Read More
-                            <span class="glyphicon glyphicon-link"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="col-md-4 mb-4">
-                <div >
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg" alt="Card image cap">
-
-
-                    <div class="container" >
-                        <h3 >3rd 1st</h3>
-                        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus? Accusantium, aut beatae commodi dolore dolores esse fugit id </p>
-                    </div>
-                    <div>
-                        <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">Read More
-                            <span class="glyphicon glyphicon-link"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div >
-                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg" alt="Card image cap">
-
-                    <div class="container">
-                        <h3 >3rd 2nd</h3>
-                        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus? Accusantium, aut beatae commodi dolore dolores esse fugit id </p>
-                    </div>
-                    <div>
-                        <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">Read More
-                            <span class="glyphicon glyphicon-link"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/.Second slide-->
-
-        <!--Third slide-->
-        <!--<div class="carousel-item">-->
-
-            <!--<div class="col-md-4 mb-4">-->
-                <!--<div class="card">-->
-                    <!--<img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(38).jpg" alt="Card image cap">-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="col-md-4 mb-4">-->
-                <!--<div class="card">-->
-                    <!--<div class="post-img">-->
-                        <!--<img src="../../images/UCSCLogo.png" alt="">-->
-                        <!--<a href="#" class="read">read more</a>-->
-                    <!--</div>-->
-                    <!--<div class="post-content">-->
-                                    <!--<span class="post-author">-->
-                                        <!--<a href="#"><img src="images/img-5.jpg" alt=""></a>-->
-                                    <!--</span>-->
-                        <!--<h3 class="post-title">Latest News Post</h3>-->
-                        <!--<p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus? Accusantium, aut beatae commodi dolore dolores esse fugit id illum ipsam nemo nesciunt obcaecati officiis praesentium provident quasi quis quo repellat sapiente sequi temporibus voluptates.</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-
-
-
-            <!--<div class="col-md-4 mb-4">-->
-                <!--<div class="card">-->
-                    <!--<div class="post-img">-->
-                        <!--<img src="../../images/UCSCLogo.png" alt="">-->
-                        <!--<a href="#" class="read">read more</a>-->
-                    <!--</div>-->
-                    <!--<div class="post-content">-->
-                                    <!--<span class="post-author">-->
-                                        <!--<a href="#"><img src="images/img-5.jpg" alt=""></a>-->
-                                    <!--</span>-->
-                        <!--<h3 class="post-title">Latest News Post</h3>-->
-                        <!--<p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus? Accusantium, aut beatae commodi dolore dolores esse fugit id illum ipsam nemo nesciunt obcaecati officiis praesentium provident quasi quis quo repellat sapiente sequi temporibus voluptates.</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-
-        <!--</div>-->
-        <!--&lt;!&ndash;/.Third slide&ndash;&gt;-->
-
+                          <div class="container">
+                              <h7><b>{{this.title}}</b></h7>
+                              <br>
+                              <p >{{this.conclustion}}</p>
+                          </div>
+                          <div>
+                              <a class="btn btn-outline-black btn-sm" href="" target="_blank" role="button">Read More
+                                  <span class="glyphicon glyphicon-link"></span>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            {{/each}}
     </div>
     <!--/.Slides-->
 
