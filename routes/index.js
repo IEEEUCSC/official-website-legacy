@@ -30,12 +30,12 @@ router.get('/cs_chapter',function (req, res,next) {
 
 /* GET event page. */
 router.get('/events', function(req, res, next) {
-
+    // console.log("here in events");
     connection.query('SELECT * FROM article', function (err, rows) {
         if (err){
             throw err;
         }else {
-            console.log(rows);
+            // console.log(rows);
             res.render('articles', {events:rows});
         }
     });
@@ -45,12 +45,14 @@ router.get('/events', function(req, res, next) {
 /* GET event page. */
 router.get('/event/:event_id', function(req, res, next) {
 
-    connection.query("SELECT * FROM article WHERE id = '"+req.params.event_id+ "'" , function (err, rows) {
+    connection.query("SELECT * FROM article WHERE id = '"+req.params.event_id+ "' ; SELECT * FROM article ORDER BY id DESC LIMIT 5" ,[1, 2] ,function (err, rows) {
         if (err){
             throw err;
         }else {
-            console.log(rows);
-            res.render('event', {events:rows});
+            // console.log(rows[0][0].title);
+             console.log(rows[1]);
+
+            res.render('event', {events:rows[0][0],latest:rows[1]});
         }
     });
 
