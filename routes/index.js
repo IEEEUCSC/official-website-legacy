@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var connection = require('../connection');
+const bodyParser = require('body-parser');
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
@@ -65,12 +66,31 @@ router.get('/event/:event_id', function(req, res, next) {
             throw err;
         }else {
             // console.log(rows[0][0].title);
-             console.log(rows[1]);
+
 
             res.render('event', {events:rows[0][0],latest:rows[1]});
         }
     });
 
 });
+
+/* GET serch results. */
+router.get('/search', function(req, res, next) {
+
+
+    connection.query("SELECT * From article  WHERE title LIKE '%IEEE%' ; SELECT * FROM article ORDER BY id DESC LIMIT 5" ,[1, 2] ,function (err, rows) {
+        if (err){
+            throw err;
+        }else {
+            // console.log(rows[0][0].title);
+            console.log(rows[1]);
+
+            res.render('articles', {events:rows[0],latest:rows[1]});
+        }
+    });
+
+});
+
+
 
 module.exports = router;
