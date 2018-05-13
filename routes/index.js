@@ -3,8 +3,23 @@ var router = express.Router();
 var connection = require('../connection');
 
 /* GET home page. */
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express' });
+// });
+
+/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+    connection.query("SELECT * FROM article ORDER BY id DESC LIMIT 6" ,function (err, rows) {
+        if (err){
+            throw err;
+        }else {
+            var latest3 = rows.slice(0,3);
+            var early3 = rows.slice(3,6);
+            res.render('index', {latest3:latest3,early3:early3});
+        }
+    });
+
+
 });
 
 //get contact page

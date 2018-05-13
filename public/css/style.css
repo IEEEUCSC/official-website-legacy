@@ -4,29 +4,46 @@
 }
 
 body {
-  font-family: pragmetica;
+  font-family: 'Quicksand', sans-serif;
+  color: #424242 !important;
+}
 
+.logo {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+/* ::placeholder {
+    opacity: 0.2 !important;
+} */
+
+.search-form {
+  opacity: 0.4;
+}
+
+.search-form {
+  padding-left: 20px;
 }
 
 .navbar {
+  font-size: 1em;
   position: fixed;
   width: 100%;
-  height: 15%;
+  height: 60px;
   padding:10px;
-  z-index: 999;
+  z-index: 9;
 }
 
-.navbar-collapse{
-  position: relative;
-  left:40%;
-
-
-
+.nav-right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.logo{
-  height="90"
+.nav-item {
+  justify-content: flex-end;
 }
+
 .carousel {
   height: 100%;
   width: 100%;
@@ -90,7 +107,6 @@ background-color: #fafafa;
   /* The image used */
   background-image: url("../../images/circles-light.png");
 
-
   /* Half height */
   height: 100%;
 
@@ -108,4 +124,3 @@ background-color: #fafafa;
 
 .carousel-multi-item-2 .card img {
   border-radius: 2px; }
-

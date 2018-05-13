@@ -1,79 +1,73 @@
-<main>
+<header>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style.min.css" rel="stylesheet">
+    <script src="../js/react.min.js" ></script>
+    <script src="../js/react-dom.min.js" ></script>
+    <script src="../js/browser.min.js" ></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</header>
 
-    <!--Main container-->
+<main> <!--Main container-->
     <div class="container" id  >
-
         <br><br><br><br><br><br>
-
         <br>
-
-
         <div class="row">
-
             <!--main content-->
             <div class="col-lg-8 col-md-12 mb-8">
-
-
-
-
-
-                    <div class="card-body">
-
-                        <h4>{{events.title}} </h4><br><br>
-
-
-                        <div class="view overlay">
-                            <img src="../images/{{events.image1}}" class="img-fluid" alt="zoom" height="260" width="90%">
-
-                        </div><br>
-                        <small>{{events.published_date}}</small><br>
-
-                       <p> {{events.para1}}</p>
-
-                        <p> {{events.para2}}</p>
-
+                <div class="card-body">
+                    <h4>{{events.title}} </h4><br><br>
+                    <div class="view overlay">
+                        <img src="../images/{{events.image1}}" class="img-fluid" alt="zoom" height="260" width="90%">
                     </div>
-
-
-
+                    <br>
+                    <small>{{events.published_date}}</small>
+                    <br>
+                    <p> {{events.para1}}</p>
+                    <p> {{events.para2}}</p>
                 </div>
-                <!--main content-->
-
+            </div>
+            <!--main content-->
             <!--recent posts-->
             <div class="col-lg-4 col-md-12 mb-4">
-
-                <br>Latest Posts<hr>
-
+                <br>
+                Latest Posts
+                <hr>
                 <div class="list-group">
-
                     {{#each latest}}
-
-                        <a href="/event/{{this.id}}" class="list-group-item list-group-item-action flex-column align-items-start">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">{{this.title}}</h5>
-
-                            </div>
-
-                            <p class="mb-1"><img src="../images/{{this.image1}}" class="img-fluid" alt="zoom" height="50%" width="60%">
-                                <small class="text-muted">{{this.published_date}}</small></p>
-
-                        </a>
-
+                    <a href="/event/{{this.id}}" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">{{this.title}}</h5>
+                        </div>
+                        <p class="mb-1"><img src="../images/{{this.image1}}" class="img-fluid" alt="zoom" height="100px" width="200px">
+                            <small class="text-muted">{{this.published_date}}</small>
+                        </p>
+                    </a>
                     {{/each}}
-
                 </div>
-
-
             </div>
-            <!--recent posts-->
-
-
         </div>
-
     </div>
     <!--Main container-->
-
 </main>
 <!--Main layout-->
 
-
+<<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="../js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="../js/mdb.min.js"></script>
+<!-- Initializations -->
+<script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+</script>
