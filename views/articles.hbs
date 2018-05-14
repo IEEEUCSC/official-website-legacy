@@ -10,8 +10,8 @@
 
         <div class="row">
 
-            <!--main content-->
-            <div class="col-lg-8 col-md-12 mb-8">
+            
+            {{!-- <div class="col-lg-8 col-md-12 mb-8">
 
 
                 <br><br>
@@ -32,14 +32,24 @@
                         </div>
                     {{/each}}
                 </div>
-
-
-
+            </div> --}}
+            
+            {{#each events}}
+            <div class="col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-img">
+                        <img class="card-img-top" src="../images/{{this.image1}}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a>{{this.title}}</a></h4>
+                        <p class="card-text">{{this.conclusion}}</p>
+                        <a href="/event/{{this.id}}" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
             </div>
-            <!--main content-->
+            {{/each}}
 
-            <!--recent posts-->
-            <div class="col-lg-4 col-md-12 mb-4">
+            {{!-- <div class="col-lg-4 col-md-12 mb-4">
 
                 <br>Latest Posts<hr>
 
@@ -63,7 +73,7 @@
                 </div>
 
 
-            </div>
+            </div> --}}
             <!--recent posts-->
 
 

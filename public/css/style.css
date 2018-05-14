@@ -228,3 +228,24 @@ body, html {
 .office-heading {
   margin: 0 60px 0 60px;
 }
+
+.card {
+  margin-bottom: 75px;
+}
+
+.card-img {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
