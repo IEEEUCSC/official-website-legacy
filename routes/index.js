@@ -1,7 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var connection = require('../connection');
-const bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
+
+var jsonParser = bodyParser.json();
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
@@ -75,22 +81,21 @@ router.get('/event/:event_id', function(req, res, next) {
 });
 
 /* GET serch results. */
-router.get('/search', function(req, res, next) {
-
-
-    connection.query("SELECT * From article  WHERE title LIKE '%IEEE%' ; SELECT * FROM article ORDER BY id DESC LIMIT 5" ,[1, 2] ,function (err, rows) {
+router.post('/search',urlencodedParser, function(req, res, next) {
+    const keyword = req.body.key;
+    console.log(keyword);
+    connection.query("SELECT * From article  WHERE title LIKE '%"+keyword+"%' ; SELECT * FROM article ORDER BY id DESC LIMIT 5" ,[1, 2] ,function (err, rows) {
         if (err){
             throw err;
         }else {
             // console.log(rows[0][0].title);
-            console.log(rows[1]);
+
 
             res.render('articles', {events:rows[0],latest:rows[1]});
         }
     });
 
 });
-
 
 
 module.exports = router;
