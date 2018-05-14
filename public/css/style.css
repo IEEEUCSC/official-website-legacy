@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   color: #424242 !important;
 }
 
@@ -183,8 +183,6 @@ body, html {
 
 #boardimag{
   position: center;
-background-color: #fafafa;
-
 }
 
 
@@ -222,3 +220,11 @@ background-color: #fafafa;
   border-radius: 50% !important;
 }
 
+.user-image {
+  height: 220px;
+  margin: auto;
+}
+
+.office-heading {
+  margin: 0 60px 0 60px;
+}
