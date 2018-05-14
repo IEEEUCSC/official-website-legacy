@@ -3,7 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const bodyParser = require('body-parser');
+
+var bodyParser = require('body-parser')
 
 
 var expressHbs = require('express-handlebars');
@@ -18,7 +19,10 @@ var app = express();
 app.engine('.hbs', expressHbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }))
+
+
+app.use(bodyParser.json())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -32,6 +36,12 @@ app.use('/', indexRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+app.use(function (req, res) {
+    res.setHeader('Content-Type', 'text/plain')
+    res.write('you posted:\n')
+    res.end(JSON.stringify(req.body, null, 2))
+})
 
 // error handler
 app.use(function(err, req, res, next) {
