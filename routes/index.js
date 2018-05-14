@@ -5,8 +5,7 @@ var bodyParser = require('body-parser');
 
 var jsonParser = bodyParser.json();
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
-
+var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 
 /* GET home page. */
@@ -15,14 +14,14 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 // });
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    connection.query("SELECT * FROM article ORDER BY id DESC LIMIT 6" ,function (err, rows) {
-        if (err){
+router.get('/', function (req, res, next) {
+    connection.query("SELECT * FROM article ORDER BY id DESC LIMIT 6", function (err, rows) {
+        if (err) {
             throw err;
-        }else {
-            var latest3 = rows.slice(0,3);
-            var early3 = rows.slice(3,6);
-            res.render('index', {latest3:latest3,early3:early3});
+        } else {
+            var latest3 = rows.slice(0, 3);
+            var early3 = rows.slice(3, 6);
+            res.render('index', {latest3: latest3, early3: early3});
         }
     });
 
@@ -30,68 +29,68 @@ router.get('/', function(req, res, next) {
 });
 
 //get contact page
-router.get('/contact',function (req, res,next) {
-    res.render('contact',{title:'Contact'});
+router.get('/contact', function (req, res, next) {
+    res.render('contact', {title: 'Contact'});
 });
 
 
 //get officebearers page
-router.get('/official',function (req, res,next) {
-    res.render('official',{title:'Office Bearers'});
+router.get('/official', function (req, res, next) {
+    res.render('official', {title: 'Office Bearers'});
 });
 
 //get wie page
-router.get('/wie',function (req, res,next) {
-    res.render('wie',{title:'WIE Details'});
+router.get('/wie', function (req, res, next) {
+    res.render('wie', {title: 'WIE Details'});
 });
 
 //get cs_chapter page
-router.get('/cs_chapter',function (req, res,next) {
-    res.render('cs_chapter',{title:'cs_chaptern Details'});
+router.get('/cs_chapter', function (req, res, next) {
+    res.render('cs_chapter', {title: 'cs_chaptern Details'});
 });
 
 /* GET article page. */
-router.get('/events', function(req, res, next) {
+router.get('/events', function (req, res, next) {
     // console.log("here in events");
-    connection.query('SELECT * FROM article ORDER BY id DESC ; SELECT * FROM article ORDER BY id DESC LIMIT 5',[1, 2], function (err, rows) {
-        if (err){
+    connection.query('SELECT * FROM article ORDER BY id DESC ; SELECT * FROM article ORDER BY id DESC LIMIT 5', [1, 2], function (err, rows) {
+        if (err) {
             throw err;
-        }else {
+        } else {
             // console.log(rows);
-            res.render('articles', {events:rows[0],latest:rows[1]});
+            res.render('articles', {events: rows[0], latest: rows[1]});
         }
     });
 
 });
 
 /* GET event page. */
-router.get('/event/:event_id', function(req, res, next) {
+router.get('/event/:event_id', function (req, res, next) {
 
-    connection.query("SELECT * FROM article WHERE id = '"+req.params.event_id+ "' ; SELECT * FROM article ORDER BY id DESC LIMIT 5" ,[1, 2] ,function (err, rows) {
-        if (err){
+    connection.query("SELECT * FROM article WHERE id = '" + req.params.event_id + "' ; SELECT * FROM article ORDER BY id DESC LIMIT 5", [1, 2], function (err, rows) {
+        if (err) {
             throw err;
-        }else {
+        } else {
             // console.log(rows[0][0].title);
 
 
-            res.render('event', {events:rows[0][0],latest:rows[1]});
+            res.render('event', {events: rows[0][0], latest: rows[1]});
         }
     });
 
 });
 
 /* GET serch results. */
-router.post('/search',urlencodedParser, function(req, res, next) {
+router.post('/search', urlencodedParser, function (req, res, next) {
     const keyword = req.body.key;
     console.log(keyword);
-    connection.query("SELECT * From article  WHERE title LIKE '%"+keyword+"%' ; SELECT * FROM article ORDER BY id DESC LIMIT 5" ,[1, 2] ,function (err, rows) {
-        if (err){
+    connection.query("SELECT * From article  WHERE title LIKE '%" + keyword + "%' ; SELECT * FROM article ORDER BY id DESC LIMIT 5", [1, 2], function (err, rows) {
+        if (err) {
             throw err;
-        }else {
+        } else {
             // console.log(rows[0][0].title);
 
 
-            res.render('articles', {events:rows[0],latest:rows[1]});
+            res.render('articles', {events: rows[0], latest: rows[1]});
         }
     });
 
