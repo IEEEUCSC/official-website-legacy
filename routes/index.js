@@ -15,12 +15,12 @@ var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    connection.query("SELECT * FROM article ORDER BY id DESC LIMIT 6", function (err, rows) {
+    connection.query("SELECT * FROM article ORDER BY id DESC LIMIT 7", function (err, rows) {
         if (err) {
             throw err;
         } else {
             var latest3 = rows.slice(0, 3);
-            var early3 = rows.slice(3, 6);
+            var early3 = rows.slice(3, 7);
             res.render('index', {latest3: latest3, early3: early3});
         }
     });
