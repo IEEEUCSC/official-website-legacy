@@ -4,7 +4,7 @@ var db;
 var settings = {
     host     : 'localhost',
     user     : 'root',
-    password : '',
+    password : '123',
     database : 'ieeedb',
     multipleStatements: true
 };
