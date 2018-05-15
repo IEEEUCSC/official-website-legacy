@@ -5,7 +5,8 @@ var settings = {
     host     : 'localhost',
     user     : 'root',
     password : '123',
-    database : 'ieeedb',
+    // database : 'ieeedb',
+    database : 'b2gohrukcxgzmwwj',
     multipleStatements: true
 };
 
